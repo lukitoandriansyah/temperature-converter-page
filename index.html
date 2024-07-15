@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="waterfall"></div> <!-- Elemen animasi air terjun -->
+<div class="bird"></div> <!-- Elemen animasi burung -->
+<div class="container">
+    <h1>Temperature Converter</h1>
+    <div class="input-group">
+        <label for="temperature">Temperature</label>
+        <input type="number" id="temperature" placeholder="Enter temperature">
+    </div>
+    <div class="input-group-container">
+        <div class="input-group">
+            <label for="convert-from">Convert from</label>
+            <select id="convert-from">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Reaumur">Reaumur</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="convert-to">Convert to</label>
+            <select id="convert-to">
+                <option value="All">All</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Reaumur">Reaumur</option>
+            </select>
+        </div>
+    </div>
+    <button id="convert">Convert</button>
+    <div class="results">
+        <div class="result">
+            <label for="celsius">Celsius</label>
+            <input type="text" id="celsius" readonly>
+        </div>
+        <div class="result">
+            <label for="fahrenheit">Fahrenheit</label>
+            <input type="text" id="fahrenheit" readonly>
+        </div>
+        <div class="result">
+            <label for="kelvin">Kelvin</label>
+            <input type="text" id="kelvin" readonly>
+        </div>
+        <div class="result">
+            <label for="reaumur">Reaumur</label>
+            <input type="text" id="reaumur" readonly>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

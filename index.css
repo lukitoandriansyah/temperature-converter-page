@@ -1,0 +1,160 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    margin: 0;
+    background-image: url('https://wallpaperaccess.com/full/2802458.jpg'); /* Background pattern */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden; /* Agar animasi tidak keluar dari area tampilan */
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px; /* Meningkatkan lebar maksimum untuk ruang tambahan */
+    position: relative;
+    z-index: 1; /* Agar kontainer tetap di atas animasi */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ff6347;  /* Warna cerah untuk judul */
+    font-size: 2em;
+    text-shadow: 1px 1px #ffab73;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    color: #ff6347;  /* Warna cerah untuk label */
+}
+
+input, select {
+    padding: 10px;
+    border: 2px solid #ffab73;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6347;  /* Warna cerah untuk tombol */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ffab73;  /* Warna lebih terang untuk hover */
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.result {
+    flex: 1 1 calc(50% - 10px); /* 2 kolom */
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.result label {
+    margin-bottom: 5px;
+    color: #ff6347;  /* Warna cerah untuk label */
+}
+
+.result input {
+    padding: 10px;
+    border: 2px solid #ffab73;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Animasi air terjun */
+.waterfall {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 100px;
+    height: 300px;
+    background: url('https://clipart-library.com/images/piqrnAXrT.gif') no-repeat;
+    background-size: cover;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% { top: -300px; }
+    100% { top: 100%; }
+}
+
+/* Animasi burung */
+.bird {
+    position: absolute;
+    top: 20%;
+    left: -50px; /* Mulai di luar tampilan */
+    width: 50px;
+    height: 30px;
+    background: url('https://clipart-library.com/images/piqrnAXrT.gif') no-repeat;
+    background-size: cover;
+    animation: fly 10s linear infinite;
+}
+
+@keyframes fly {
+    0% { left: -50px; } /* Mulai dari luar kiri */
+    100% { left: 100%; } /* Bergerak ke luar kanan */
+}
+
+/* Media Queries untuk perangkat mobile */
+@media (max-width: 768px) {
+    .input-group {
+        width: 100%;
+    }
+
+    .input-group-container {
+        flex-direction: column; /* Letakkan elemen secara vertikal pada layar kecil */
+    }
+
+    .result {
+        flex: 1 1 100%; /* Setiap hasil menjadi satu baris penuh */
+        margin: 10px 0; /* Jarak vertikal antara hasil */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    button {
+        font-size: 1em; /* Ukuran font tombol lebih kecil */
+    }
+}
